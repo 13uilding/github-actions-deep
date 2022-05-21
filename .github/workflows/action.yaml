@@ -1,0 +1,18 @@
+name: test 1 2 3
+
+on: 
+  push:
+    branches:
+      - main
+      - "feature/*"
+  pull_request:
+    branches: 
+      - main 
+      - develop
+      
+jobs:
+  init:
+    runs-on: self-hosted
+      - run: echo "hello world"
+      - run: echo $HOSTNAME
+      
